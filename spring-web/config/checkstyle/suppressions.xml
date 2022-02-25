@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Puppy Crawl//DTD Suppressions 1.0//EN"
+        "http://www.puppycrawl.com/dtds/suppressions_1_0.dtd"
+        >
+
+<suppressions>
+    <!-- ============================== -->
+    <!-- MISCELLANEOUS                  -->
+    <!-- ============================== -->
+
+<!--    <suppress-->
+<!--            checks="UncommentedMain"-->
+<!--            files=".*ViolationsApiApplication\.java|.*ViolationsApiMigrate\.java"-->
+<!--    />-->
+
+<!--    <suppress-->
+<!--            checks="CyclomaticComplexity"-->
+<!--            files=".*ViolationsApiApplication\.java|.*ViolationsApiMigrate\.java"-->
+<!--    />-->
+
+    <suppress
+            checks="HideUtilityClassConstructor"
+            files="SpringWebApplication.java"
+    />
+
+    <suppress checks="AvoidStaticImport"
+              files=".*Test\.java"
+    />
+
+    <suppress checks="MethodName"
+              files=".*Test\.java"
+    />
+
+    <!--  The try/catch around Exception is by design here: the BaseGenerator should continue operating, even in case of an exception.  -->
+<!--    <suppress-->
+<!--            checks = "IllegalCatch"-->
+<!--            files  = "src[/\\]main[/\\]java[/\\]com[/\\]unified[/\\]platform[/\\]violations[/\\]api[/\\]service[/\\]impl[/\\]RuleServiceImpl\.java$"-->
+<!--            lines  = "67"-->
+<!--    />-->
+
+</suppressions>

@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl.auto: none
+        show_sql: false
+        jdbc.lob.non_contextual_creation: true
+
+jwt:
+  expire: 36000
+  private.key: classpath:key/app.key
+  public.key: classpath:key/app.pub
+
+
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: true
+
+app:
+  allow:
+    mvc-paths: /swagger-ui.html, /swagger-ui/**, /v3/api-docs/**
