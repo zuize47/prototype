@@ -26,7 +26,6 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'com.nimbusds:nimbus-jose-jwt:9.20'
     implementation 'org.springframework.security:spring-security-oauth2-jose'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -58,3 +57,6 @@ task installLocalGitHook(type: Copy){
 }
 
 build.dependsOn installLocalGitHook
+
+// code coverage report
+
