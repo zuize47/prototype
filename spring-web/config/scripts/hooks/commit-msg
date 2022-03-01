@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Script called by "git commit" with one argument, the name of the file that has the commit message.
+
+
+# ======================================================================================================================
+# MAIN
+# ======================================================================================================================
+
+# Check commit message
+head -n 1 ${1} | grep -qE "^[a-zA-Z]{2,5}-[0-9]{1,5}|^Merge branch |^Merge pull request #|^Setting version to "
+if [[ $? -ne 0 ]]; then
+    echo >&2 "[POLICY]"
+    echo >&2 "[POLICY] Your commit message is not formatted properly."
+    echo >&2 "[POLICY] All commit messages should start with \"\$\$\$-#####\", where \$\$\$ is a 2-5 letters word, and ### is a 1-5 digits number."
+    echo >&2 "[POLICY]"
+
+    exit 1
+fi
+
+# Commit is ok
+exit 0
+
+
+# ======================================================================================================================
